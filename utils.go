@@ -40,10 +40,8 @@ func toString(value interface{}) string {
 		return strconv.FormatBool(value.(bool))
 	case float64:
 		return fmt.Sprintf("%f", value.(float64))
-	case []string:
-		return strings.Join(value.([]string), "\n")
 	default:
-		return value.(string)
+		return fmt.Sprintf("%v", value)
 	}
 }
 
